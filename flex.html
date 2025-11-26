@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Webpage</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* --- Flexbox Layout --- */
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #495057;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column; /* Mobile first */
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #6c757d;
+      border-radius: 5px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column; /* mobile first */
+      gap: 20px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    article, aside {
+      background-color: #e9ecef;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    aside {
+      background-color: #f8f9fa;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* --- Media Queries --- */
+    @media (min-width: 768px) {
+      nav ul {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      main {
+        flex-direction: row; /* sidebar + content side by side */
+      }
+
+      article {
+        flex: 2;
+      }
+
+      aside {
+        flex: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Personal Page</h1>
+    <p>IT REFLECTS MY INTEREST AND INTRODUCTION ABOUT MYSELF...</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="contactme.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <article id="about">
+      <h2><u><i>About Me</i></u></h2>
+      <img src="" alt="aish profile" style="max-width:100%;height:auto;">
+      <p>Hi! I am Ayesha, a computer science student (5th semester) passionate about coding and designing webpages and websites.</p>
+    </article>
+
+    <article id="Hobbies">
+      <h2><u><i>Hobbies</i></u></h2>
+      <ol>
+        <li>Coding projects</li>
+        <li>Traveling</li>
+        <li>Sketching</li>
+        <li>Photography</li>
+      </ol>
+
+      <!-- Bootstrap Card Grid for Projects -->
+      <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80" class="card-img-top" alt="Project 1">
+              <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">Description of Project 1.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80" class="card-img-top" alt="Project 2">
+              <div class="card-body">
+                <h5 class="card-title">Project 2</h5>
+                <p class="card-text">Description of Project 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" class="card-img-top" alt="Project 3">
+              <div class="card-body">
+                <h5 class="card-title">Project 3</h5>
+                <p class="card-text">Description of Project 3.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <aside>
+      <h2><u><i>Favourite Websites</i></u></h2>
+      <ul>
+        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+        <li><a href="https://developer.mozilla.org" target="_blank">MDN Docs</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Contact me at: <a href="mailto:ayeshaamir0306@gmail.com">ayeshaamir0306@gmail.com</a></p>
+    <p>&copy; 2025 Ayesha | All rights reserved | <a href="#top">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
